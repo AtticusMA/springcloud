@@ -25,4 +25,15 @@ public class GoodsController {
         goods.setDescription(name);
         return goods;
     }
+
+    @Value("${foo}")
+    private String foo;
+    @GetMapping("/goods/foo")
+    public Goods getFoo(int id){
+
+        Goods goods = new Goods();
+        goods =goodsService.findById(2);
+        goods.setDescription(foo);
+        return goods;
+    }
 }

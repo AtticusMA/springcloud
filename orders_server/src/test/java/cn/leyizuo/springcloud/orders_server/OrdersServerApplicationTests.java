@@ -21,7 +21,7 @@ public class OrdersServerApplicationTests {
         String serviceId="cn-leyizuo-springcloud-goodsserver";
         for(int i=0;i<100;i++){
             ServiceInstance serviceInstance=loadBalancerClient.choose(serviceId);
-            System.out.println("第"+(i+1)+"次"+serviceInstance.getPort()+serviceInstance.getInstanceId());
+            System.out.println("第"+(i+1)+"次"+serviceInstance.getPort());
         }
     }
 }

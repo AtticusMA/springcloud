@@ -12,11 +12,11 @@ import java.util.Map;
 public class GoodsService {
     private final static Map<Integer, Goods>  DataBase = new HashMap<>();
 
-    @Value("${server.port}")
-    private static String name;   //这个为什么就获取不了呢
+    //@Value("${server.port}")
+    //private static String name;   //这个为什么就获取不了呢
 
     static{
-        DataBase.put(1,new Goods(1,name,new BigDecimal(10)));
+        DataBase.put(1,new Goods(1,"good1",new BigDecimal(10)));
         DataBase.put(2,new Goods(2,"good2",new BigDecimal(10.0)));
         DataBase.put(3,new Goods(3,"good3",new BigDecimal(10.1)));
         DataBase.put(4,new Goods(4,"good4",new BigDecimal(10.2)));
