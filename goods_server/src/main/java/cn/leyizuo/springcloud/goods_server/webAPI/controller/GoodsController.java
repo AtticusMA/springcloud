@@ -5,6 +5,7 @@ import cn.leyizuo.springcloud.goods_server.webAPI.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.config.client.ConfigServicePropertySourceLocator;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,8 @@ public class GoodsController {
 
     @Value("${server.port}")
     private String name;
+
+
     @GetMapping("/goods/{id}")
     public Goods getOrderById(@PathVariable int id){
 
@@ -26,8 +29,11 @@ public class GoodsController {
         return goods;
     }
 
+
+
     @Value("${foo}")
     private String foo;
+
     @GetMapping("/goods/foo")
     public Goods getFoo(int id){
 
