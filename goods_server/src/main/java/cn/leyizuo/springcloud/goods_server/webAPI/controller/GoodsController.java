@@ -5,12 +5,13 @@ import cn.leyizuo.springcloud.goods_server.webAPI.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.config.client.ConfigServicePropertySourceLocator;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RefreshScope
 public class GoodsController {
 
     @Autowired
